@@ -1,0 +1,18 @@
+<resources>
+    <style name="Theme.TiendaTech" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/teal_light</item>
+        <item name="colorOnSecondaryContainer">@color/navy</item>
+        <item name="colorTertiary">@color/coral</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/navy</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="materialButtonStyle">@style/Widget.Tienda.Button</item>
+        <item name="textInputStyle">@style/Widget.Tienda.TextInput</item>
+    </style>
+</resources>

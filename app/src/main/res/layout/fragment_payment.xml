@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_banner" android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total a pagar" android:textColor="@color/teal_light" />
+            <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="30sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/white" />
+        </LinearLayout>
+        <TextView style="@style/Tienda.Section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medio de pago" />
+        <RadioGroup android:id="@+id/rgMethod" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/rbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:buttonTint="@color/teal" android:text="Tarjeta crédito / débito" />
+            <RadioButton android:id="@+id/rbPse" android:layout_width="match_parent" android:layout_height="wrap_content" android:buttonTint="@color/teal" android:text="PSE" />
+            <RadioButton android:id="@+id/rbNequi" android:layout_width="match_parent" android:layout_height="wrap_content" android:buttonTint="@color/teal" android:text="Nequi" />
+            <RadioButton android:id="@+id/rbCash" android:layout_width="match_parent" android:layout_height="wrap_content" android:buttonTint="@color/teal" android:text="Contra entrega" />
+        </RadioGroup>
+        <TextView style="@style/Tienda.Section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dirección de entrega" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección y ciudad">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPostalAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Tienda.Body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textSize="12sp" android:text="Al pagar aceptas los términos, la política de devoluciones y el tratamiento de datos personales (Ley 1581 de 2012)." />
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="12dp" android:indeterminateTint="@color/coral" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnConfirm" style="@style/Widget.Tienda.Button.Coral" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Confirmar pago" />
+    </LinearLayout>
+</ScrollView>

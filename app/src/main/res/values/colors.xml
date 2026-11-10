@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#1B2A49</color>
+    <color name="navy_dark">#121C33</color>
+    <color name="teal">#00A896</color>
+    <color name="teal_light">#D6F2EE</color>
+    <color name="coral">#FF6B4A</color>
+    <color name="bg">#F4F7FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#1B2A49</color>
+    <color name="text_secondary">#6B7A90</color>
+    <color name="divider">#E1E7EF</color>
+    <color name="success">#2E9E6B</color>
+    <color name="warning">#F4A100</color>
+</resources>

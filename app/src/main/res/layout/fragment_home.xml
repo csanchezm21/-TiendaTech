@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/tvGreeting" style="@style/Tienda.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView style="@style/Tienda.Body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¿Qué accesorio buscas hoy?" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_banner" android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ofertas de la semana" android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Audio, carga y cómputo con envío a todo el país" android:textColor="@color/teal_light" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCatalog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Ver catálogo" />
+        </LinearLayout>
+        <TextView style="@style/Tienda.Section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Categorías" />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chipCats" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleLine="true" />
+        </HorizontalScrollView>
+        <TextView style="@style/Tienda.Section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Destacados" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvFeatured" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</ScrollView>
