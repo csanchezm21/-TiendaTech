@@ -8,6 +8,12 @@ data class User(
     val id: Int, var name: String, var email: String,
     var password: String, var role: Role, var active: Boolean = true
 )
+data class UserProfile(
+    val name: String = "",
+    val email: String = "",
+    val role: String = "BUYER",
+    val active: Boolean = true
+)
 
 data class Product(
     val id: Int, var name: String, var category: String, var price: Int,

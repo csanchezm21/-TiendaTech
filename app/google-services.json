@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "983752143746",
+    "project_id": "tiendatech-3ac1a",
+    "storage_bucket": "tiendatech-3ac1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983752143746:android:e48c9fd1087cdc9907559b",
+        "android_client_info": {
+          "package_name": "co.edu.compensar.tiendatech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC86eM0SrfGlt4Zqvt24VgbwvG8XKvYUgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
