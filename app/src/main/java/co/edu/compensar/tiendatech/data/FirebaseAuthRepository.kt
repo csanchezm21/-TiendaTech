@@ -46,5 +46,11 @@ class FirebaseAuthRepository {
     fun obtenerUsuarioActual(): FirebaseUser? {
         return firebaseAuth.currentUser
     }
+    // Envía un correo para restablecer la contraseña.
+    suspend fun enviarRecuperacion(correo: String) {
+        firebaseAuth
+            .sendPasswordResetEmail(correo)
+            .await()
+    }
 }
 

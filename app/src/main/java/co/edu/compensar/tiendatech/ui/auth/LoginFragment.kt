@@ -86,14 +86,14 @@ class LoginFragment :
                         return@launch
                     }
 
-                    // Adaptamos los datos de Firebase al modelo actual.
                     val user = User(
                         id = firebaseUser.uid.hashCode(),
                         name = perfil.name,
                         email = perfil.email,
                         password = "",
                         role = rol,
-                        active = perfil.active
+                        active = perfil.active,
+                        firebaseUid = firebaseUser.uid
                     )
 
                     // Guardamos el último correo utilizado.

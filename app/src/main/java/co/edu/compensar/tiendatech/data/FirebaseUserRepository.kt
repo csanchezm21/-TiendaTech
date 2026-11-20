@@ -1,4 +1,5 @@
 
+
 package co.edu.compensar.tiendatech.data
 
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,5 +32,49 @@ class FirebaseUserRepository {
     suspend fun obtenerPerfil(uid: String): UserProfile? {
         val documento = usuarios.document(uid).get().await()
         return documento.toObject(UserProfile::class.java)
+    }
+
+    // Consulta todos los perfiles disponibles para el administrador.
+    suspend fun obtenerUsuarios(): List<User> {
+        val resultado = usuarios.get().await()
+
+        return resultado.documents.mapNotNull { documento ->
+
+            val perfil = documento.toObject(UserProfile::class.java)
+                ?: return@mapNotNull null
+
+            // Convertimos el rol guardado en Firestore al enum de Kotlin.
+            val rol = try {
+                Role.valueOf(perfil.role.uppercase())
+            } catch (e: IllegalArgumentException) {
+                return@mapNotNull null
+            }
+
+            User(
+                id = documento.id.hashCode(),
+                name = perfil.name,
+                email = perfil.email,
+                password = "",
+                role = rol,
+                active = perfil.active,
+                firebaseUid = documento.id
+            )
+        }
+    }
+
+    // Actualiza el nombre, rol y estado de un usuario.
+    suspend fun actualizarPerfil(
+        uid: String,
+        nombre: String,
+        rol: Role,
+        activo: Boolean
+    ) {
+        usuarios.document(uid).update(
+            mapOf(
+                "name" to nombre,
+                "role" to rol.name,
+                "active" to activo
+            )
+        ).await()
     }
 }
