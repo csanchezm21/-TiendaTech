@@ -80,6 +80,15 @@ class CatalogFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             try {
                 listaProductos = productRepository.obtenerProductos()
+
+
+                listaProductos.forEach { producto ->
+                    android.util.Log.d(
+                        "TIENDATECH",
+                        "Producto: ${producto.name} - Vendedor UID: ${producto.sellerUid}"
+                    )
+                }
+
                 refresh()
 
             } catch (e: Exception) {
@@ -87,6 +96,7 @@ class CatalogFragment :
             }
         }
     }
+
 
     // Filtra por categoría, nombre y disponibilidad.
     private fun refresh() {

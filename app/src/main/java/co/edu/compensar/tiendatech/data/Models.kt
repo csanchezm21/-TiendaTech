@@ -41,8 +41,17 @@ data class Product(
 data class CartItem(val product: Product, var qty: Int)
 
 data class Order(
-    val id: Int, val buyerId: Int, val buyerName: String, val items: String,
-    val total: Int, var status: String, val sellerId: Int
+    val id: Int,
+    val buyerId: Int,
+    val buyerName: String,
+    val items: String,
+    val total: Int,
+    var status: String,
+    val sellerId: Int,
+    var firebaseId: String? = null,
+    var buyerUid: String = "",
+    var address: String = "",
+    var sellerUid: String = ""
 )
 
 
