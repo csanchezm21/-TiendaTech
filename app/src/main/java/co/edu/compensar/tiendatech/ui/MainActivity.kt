@@ -15,7 +15,7 @@ import co.edu.compensar.tiendatech.ui.admin.*
 import co.edu.compensar.tiendatech.ui.buyer.*
 import co.edu.compensar.tiendatech.ui.seller.*
 import co.edu.compensar.tiendatech.ui.shared.*
-
+import co.edu.compensar.tiendatech.data.FirebaseAuthRepository
 /** Activity principal: Toolbar + Bottom Navigation cuyo menú cambia según el rol. */
 class MainActivity : AppCompatActivity() {
     private lateinit var b: ActivityMainBinding
@@ -90,8 +90,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun logout() {
+
+        // Cerramos la sesión en Firebase Authentication.
+        FirebaseAuthRepository().cerrarSesion()
+
+        // Limpiamos los datos locales de la aplicación.
         Repo.current = null
         Repo.cart.clear()
+
+        // Regresamos a la pantalla de inicio de sesión.
         startActivity(Intent(this, AuthActivity::class.java))
         finish()
     }

@@ -1,4 +1,7 @@
+
 <resources>
+
+    <!-- Tema principal de TiendaTech -->
     <style name="Theme.TiendaTech" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/navy</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -15,4 +18,7 @@
         <item name="materialButtonStyle">@style/Widget.Tienda.Button</item>
         <item name="textInputStyle">@style/Widget.Tienda.TextInput</item>
     </style>
+
+
+
 </resources>

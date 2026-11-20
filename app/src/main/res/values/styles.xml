@@ -1,4 +1,5 @@
 <resources>
+    <style name="Tienda" />
     <style name="Widget.Tienda.Button" parent="Widget.Material3.Button">
         <item name="backgroundTint">@color/teal</item>
         <item name="cornerRadius">14dp</item>
